@@ -1,0 +1,37 @@
+/* ------------------------------------------------------------ *\
+	Cakes
+\* ------------------------------------------------------------ */
+
+.cakes {
+	.cakes__items {
+		display: flex;
+		flex-wrap: wrap;
+		margin: -20px;
+
+		@include breakpoint-down(tablet) {
+			margin: -20px -15px; 
+		}
+
+		@include breakpoint-down(mobile-medium) {
+			margin: -20px -10px; 
+		}
+	}
+
+	.cakes__item {
+		padding: 20px;
+		flex: 0 0 calc(100% / 3);
+
+		@include breakpoint-down(tablet) {
+			padding: 20px 15px;
+		}
+
+		@include breakpoint-down(mobile) {
+			flex: 0 0 calc(100% / 2);
+		}
+
+		@include breakpoint-down(mobile-medium) {
+			padding: 20px 10px; 
+			flex: 0 0 calc(100% / 1);
+		}
+	}
+}

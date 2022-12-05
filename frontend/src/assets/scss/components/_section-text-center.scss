@@ -1,0 +1,26 @@
+/* ------------------------------------------------------------ *\
+	Section Text Center
+\* ------------------------------------------------------------ */
+
+.section-text-center {
+	padding: 200px 0 250px; 
+	text-align: center; 
+	background-color: rgba($c-lightpink, .66); 
+
+	@include breakpoint-down(tablet) {
+		padding: 120px 0 160px; 
+	}
+
+	@include breakpoint-down(mobile) {
+		padding: 75px 0 125px; 
+	}
+
+	.section__content {
+		max-width: 800px; 
+		margin: 0 auto; 
+	}
+
+	.section__actions {
+		margin-top: 30px; 
+	}
+}

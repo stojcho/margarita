@@ -1,0 +1,72 @@
+/* ------------------------------------------------------------ *\
+	Slider Testimonials
+\* ------------------------------------------------------------ */
+
+.slider-testimonials {
+	position: relative;
+	z-index: 1000;
+	overflow: hidden; 
+
+	@include breakpoint-down(mobile-small) {
+		overflow: visible;
+	}
+
+	.swiper {
+		overflow: visible;
+	}
+
+	.swiper-slide {
+		width: auto !important;
+	}
+
+	.swiper-pagination {
+		bottom: 30px;
+	}
+
+	.swiper-pagination-bullet {
+		transition: transform .15s;
+		background: $c-pink;
+	}
+
+	.swiper-pagination-bullet:not(.swiper-pagination-bullet-active) {
+		transform: scale(.8);
+		opacity: .33; 
+	}
+
+	.slider__clip {
+		position: relative;
+		padding: 100px 25px;
+
+		@include breakpoint-down(tablet) {
+			padding: 80px 25px; 
+		}
+
+		@include breakpoint-down(mobile) {
+			padding: 60px 25px; 
+		}
+	}
+
+	.slider__actions {
+		z-index: 20;
+		position: absolute;
+		top: 50%;
+		left: 0;
+		width: 100%;
+		transform: translateY(-50%);
+		display: flex;
+		justify-content: space-between;
+		font-size: 32px;
+
+		@include breakpoint-down(mobile-small) {
+			width: calc(100% + 25px);
+			left: 50%; 
+			transform: translate(-50%, -50%); 
+		}
+	}
+
+	.slider__prev,
+	.slider__next {
+		cursor: pointer;
+		color: $c-pink; 
+	}
+}

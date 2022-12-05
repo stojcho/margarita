@@ -1,0 +1,25 @@
+/* ------------------------------------------------------------ *\
+	Section text intro
+\* ------------------------------------------------------------ */
+
+.section-text-intro {
+	position: relative; 
+	padding: 100px 0 200px; 
+	text-align: center; 
+	background: $c-lightpink; 
+
+	h1 {
+		color: $c-pink; 
+	} 
+
+	&:after {
+		content: '';
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		width: 100%;
+		height: 110px;
+		background: $c-white url('../../images/temp/waves.png') repeat-x 50% 0;
+		background-size: contain;
+	}
+}

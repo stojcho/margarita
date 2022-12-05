@@ -1,0 +1,26 @@
+/* ------------------------------------------------------------ *\
+	Section Categories
+\* ------------------------------------------------------------ */
+
+.section-categories {
+	padding: 120px 0;
+
+	@include breakpoint-down(tablet) {
+		padding: 75px 0; 
+	}
+
+	@include breakpoint-down(mobile) {
+		padding: 15px 0 45px; 
+	}
+
+	.section__head {
+		text-align: center;
+		margin-bottom: 45px;
+	}
+
+	.section__content {
+		@include breakpoint-between(mobile, tablet) {
+			padding: 0 50px; 
+		}
+	}
+}

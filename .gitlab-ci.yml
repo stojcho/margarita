@@ -1,0 +1,49 @@
+stages:
+  - build-containers
+  - build-backend
+  - unit-test-backend
+  - sonarqube
+  - cypress
+  - stop-containers
+
+build-containers:
+  stage: build-containers
+  script: 
+    - docker run -d -it -p 3000:3000 --rm --name frontendtest frontendtest
+    - docker container run --name mysqltestdb --network margarita -e MYSQL_ROOT_PASSWORD=root -e MYSQL_DATABASE=margarita -d mysql:8
+    - docker container run --network margarita --name backendtest -p 8080:8080 -d backendtest
+
+build-backend:
+  stage: build-backend
+  script: 
+    - cd Margarita
+    - ./gradlew build -x test
+    - ./gradlew.bat --stop
+
+
+unit-test-backend:
+  stage: unit-test-backend
+  script: 
+    - cd Margarita
+    - ./gradlew test
+    - ./gradlew.bat --stop
+
+sonarqube:
+  stage: sonarqube
+  script: 
+    - cd Margarita
+    - ./gradlew sonarqube
+    - ./gradlew.bat --stop
+
+cypress:
+  stage: cypress
+  script:
+    - cd frontend
+    - npx cypress run
+  
+stop-containers:
+  stage: stop-containers
+  script:
+    - docker stop mysqltestdb
+    - docker stop frontendtest
+    - docker stop backendtest

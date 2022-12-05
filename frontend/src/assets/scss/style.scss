@@ -1,0 +1,67 @@
+/* ------------------------------------------------------------ *\
+	NPM
+\* ------------------------------------------------------------ */
+
+@import '~@fortawesome/fontawesome-free/css/all.css';
+@import '~swiper/swiper-bundle.css';
+
+/* ------------------------------------------------------------ *\
+	Generic
+\* ------------------------------------------------------------ */
+
+@import 'generic/variables';
+@import 'generic/functions';
+@import 'generic/mixins';
+@import 'generic/reset';
+@import 'generic/fonts';
+@import 'generic/base';
+
+/* ------------------------------------------------------------ *\
+	Components
+\* ------------------------------------------------------------ */
+
+@import './components/account';
+@import './components/btn';
+@import './components/cake';
+@import './components/cakes';
+@import './components/categories';
+@import './components/category';
+@import './components/checkbox';
+@import './components/field';
+@import './components/footer';
+@import './components/form';
+@import './components/form-user';
+@import './components/gallery';
+@import './components/header';
+@import './components/hero';
+@import './components/logo';
+@import './components/main';
+@import './components/nav';
+@import './components/nav-trigger';
+@import './components/overlay';
+@import './components/popup';
+@import './components/popups';
+@import './components/product';
+@import './components/quantity';
+@import './components/section-cakes';
+@import './components/section-categories';
+@import './components/section-form';
+@import './components/section-image-intro';
+@import './components/section-table';
+@import './components/section-testimonials';
+@import './components/section-text-center';
+@import './components/section-text-intro';
+@import './components/section-product';
+@import './components/section-dashboard';
+@import './components/shell';
+@import './components/slider-testimonials';
+@import './components/stars';
+@import './components/table';
+@import './components/wrapper';
+@import './components/testimonial';
+
+
+
+
+
+

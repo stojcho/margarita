@@ -1,0 +1,46 @@
+/* ------------------------------------------------------------ *\
+	Form user
+\* ------------------------------------------------------------ */
+
+.form-user {
+	a {
+		text-decoration: none; 
+		color: $c-pink; 
+		font-weight: 500;
+
+		&:hover {
+			text-decoration: underline; 
+		}
+	}
+	
+	.form__row + .form__row {
+		margin-top: 10px; 
+	}
+
+	.form__label {
+		display: block; 
+		font-size: 14px; 
+		font-weight: 300;
+		margin-bottom: 3px; 
+	}
+
+	.form__checkbox {
+		&:not(:last-child) {
+			margin-bottom: 10px; 
+		}
+
+		&:not(:first-child) {
+			margin-top: 10px; 
+		}
+	}
+
+	.form__actions {
+		margin-top: 25px; 
+		text-align: center; 
+	}
+
+	.form__actions p {
+		margin-top: 10px; 
+		font-size: 14px; 
+	}
+}

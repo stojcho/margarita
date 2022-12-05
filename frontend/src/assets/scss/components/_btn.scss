@@ -1,0 +1,34 @@
+/* ------------------------------------------------------------ *\
+	Button
+\* ------------------------------------------------------------ */
+
+.btn {
+	display: inline-block;
+	vertical-align: middle;
+	text-align: center;
+	cursor: pointer;
+	text-decoration: none;
+	appearance: none;
+	border: 2px solid $c-pink;
+	border-radius: 18px;
+	border-top-right-radius: 6px;
+	padding: 6px 36px;
+	line-height: 1.2;
+	font-size: 18px;
+	font-weight: 700;
+	backdrop-filter: blur(2px);
+	transition: background $t-duration ease, color $t-duration ease;
+
+	&:hover {
+		background: $c-pink;
+		color: $c-white;
+	}
+}
+
+/*  Btn block  */
+
+.btn--block {
+	display: block;
+	padding-left: 0;
+	padding-right: 0;
+}

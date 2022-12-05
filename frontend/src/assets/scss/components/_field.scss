@@ -1,0 +1,29 @@
+/* ------------------------------------------------------------ *\
+	Fields
+\* ------------------------------------------------------------ */
+
+.field {
+	font-size: 17px; 
+	font-weight: 300;
+	border-radius: 6px; 
+	border: 1.5px solid $c-pink; 
+	box-shadow: 0 2px 5px rgba($c-pink, .2);
+	width: 100%; 
+	padding: 5px 10px; 
+	transition: color .2s;
+
+	&:not(:focus) {
+		color: rgba($c-black, .67);
+	}
+}
+
+/*  Field Textarea  */
+
+.field__textarea { 
+	resize: none;
+	min-height: 150px;
+}
+
+.field__file {
+	width: 100%; 
+}

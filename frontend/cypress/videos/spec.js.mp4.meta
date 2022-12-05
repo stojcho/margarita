@@ -1,0 +1,66 @@
+;FFMETADATA1
+[CHAPTER]
+TIMEBASE=1/1000
+START=-879
+END=4981
+title=The Login Page successfully loads
+[CHAPTER]
+TIMEBASE=1/1000
+START=9982
+END=10848
+title=The Login Page validation message
+[CHAPTER]
+TIMEBASE=1/1000
+START=10766
+END=11717
+title=The Register Page successfully loads
+[CHAPTER]
+TIMEBASE=1/1000
+START=11816
+END=12670
+title=The Register Page validation message
+[CHAPTER]
+TIMEBASE=1/1000
+START=5590
+END=13525
+title=Categories and single page load validation check if header text is correct
+[CHAPTER]
+TIMEBASE=1/1000
+START=13633
+END=21504
+title=Categories and single page load validation successfully loads
+[CHAPTER]
+TIMEBASE=1/1000
+START=21001
+END=29391
+title=Account page successfully loads
+[CHAPTER]
+TIMEBASE=1/1000
+START=29868
+END=37798
+title=Add product page successfully loads
+[CHAPTER]
+TIMEBASE=1/1000
+START=36630
+END=45742
+title=Add product page validation message
+[CHAPTER]
+TIMEBASE=1/1000
+START=46901
+END=54873
+title=Order page successfully loads
+[CHAPTER]
+TIMEBASE=1/1000
+START=54899
+END=62857
+title=Dashboard pages successfully loads - product graph
+[CHAPTER]
+TIMEBASE=1/1000
+START=62919
+END=70827
+title=Dashboard pages successfully loads - order graph
+[CHAPTER]
+TIMEBASE=1/1000
+START=70266
+END=78748
+title=Create Order make the order

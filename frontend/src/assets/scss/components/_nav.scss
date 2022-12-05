@@ -1,0 +1,44 @@
+/* ------------------------------------------------------------ *\
+	Nav
+\* ------------------------------------------------------------ */
+
+.nav {
+	ul {
+		list-style: none;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		column-gap: 50px;
+
+		@include breakpoint-down(tablet) {
+			display: block; 
+			text-align: center; 
+		}
+	}
+
+	li:nth-child(3) {
+		@include breakpoint-up(tablet) {
+			margin-left: 200px;
+		}
+	}
+
+	li + li {
+		@include breakpoint-down(tablet) {
+			margin-top: 20px; 
+		}
+	}
+
+	a {
+		font-weight: 500;
+		text-decoration: none;
+		transition: color .3s ease;
+
+		@include breakpoint-down(tablet) {
+			font-size: 20px; 
+		}
+
+		&:hover {
+			color: $c-pink; 
+		}
+	}
+}

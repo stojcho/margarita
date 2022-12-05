@@ -1,0 +1,48 @@
+/* ------------------------------------------------------------ *\
+	Checkbox
+\* ------------------------------------------------------------ */
+
+.checkbox {
+  input {
+    /* display: none; */
+    position: absolute;
+    opacity: 0;
+  }
+
+  label {
+    user-select: none;
+    position: relative;
+    padding-left: 25px;
+
+    &:before,
+    &:after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 0;
+    }
+
+    &:before {
+      transform: translateY(-50%);
+      background: $c-white;
+      width: 15px;
+      height: 15px;
+    }
+
+    &:after {
+      width: 4px;
+      height: 8px;
+      border-right: 2px solid $c-pink;
+      border-bottom: 2px solid $c-pink;
+      transform: translate(calc(100% + 1px), calc(-50% - 1px)) rotate(35deg);
+      opacity: 0;
+    }
+  }
+
+  input:checked ~ label {
+    &:after {
+      opacity: 1;
+    }
+  }
+}

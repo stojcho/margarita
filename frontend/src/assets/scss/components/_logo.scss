@@ -1,0 +1,31 @@
+/* ------------------------------------------------------------ *\
+	Logo
+\* ------------------------------------------------------------ */
+
+.logo {
+	display: inline-block; 
+	width: 150px; 
+	height: 150px; 
+	background: $c-white;
+	border-radius: 50%; 
+	display: flex; 
+	justify-content: center; 
+	align-items: center; 
+	font-family: $ff-logo;
+	font: 400 32px/1 $ff-logo;
+	text-decoration: none; 
+
+	@include breakpoint-down(mobile) {
+		width: 125px; 
+		height: 125px; 
+		font-size: 28px; 
+	}
+
+	> img {
+		display: none; 
+	}
+
+	&:before {
+		content: 'Margarita'; 
+	}
+}

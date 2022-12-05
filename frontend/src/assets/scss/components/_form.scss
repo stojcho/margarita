@@ -1,0 +1,132 @@
+/* ------------------------------------------------------------ *\
+	Form
+\* ------------------------------------------------------------ */
+
+.form {
+	.form__head {
+		text-align: center; 
+		margin-bottom: 30px; 
+
+		@include breakpoint-down(mobile) {
+			margin-bottom: 20px; 
+		}
+	}
+
+	.form__head h3 {
+		font-weight: 500;
+	}
+
+	.form__inner {
+		display: flex; 
+		justify-content: space-between; 
+		gap: 75px;
+
+		@include breakpoint-down(small-desktop) {
+			gap: 50px;
+		}
+
+		@include breakpoint-down(tablet) {
+			gap: 25px;
+		}
+
+		@include breakpoint-down(mobile) {
+			display: block; 
+		}
+	}
+
+	.form__inner .form__body {
+		flex-grow: 1; 
+	}
+
+	.form__body {
+		margin-bottom: 30px; 
+	}
+
+	.form__group + .form__group {
+		margin-top: 50px; 
+
+		@include breakpoint-down(mobile) {
+			margin-top: 40px; 
+		}
+	}
+
+	.form__cols {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-gap: 30px;
+
+		@include breakpoint-down(mobile) {
+			grid-gap: 20px;
+		}
+
+		@include breakpoint-down(mobile-medium) {
+			display: block; 
+		}
+	}
+
+	.form__col + .form__col {
+		@include breakpoint-down(mobile-medium) {
+		 	margin-top: 10px; 
+		 } 
+	}
+
+	.form__row {
+		&:not(:last-child) {
+			margin-bottom: 15px; 
+
+			@include breakpoint-down(mobile) {
+				margin-bottom: 10px; 
+			}
+		}
+	}
+
+	.form__row-inner {
+		padding: 15px 0; 
+		display: flex;
+		justify-content: space-between;  
+		align-items: center; 
+		gap: 35px;
+
+		@include breakpoint-down(tablet) {
+			gap: 20px;
+		}
+
+		@include breakpoint-down(mobile-medium) {
+			display: block; 
+		}
+	}
+
+	.form__quantity {
+		flex-shrink: 0;
+
+		@include breakpoint-down(mobile-medium) {
+			display: flex; 
+			justify-content: flex-end; 
+			margin-top: 15px; 
+		}
+	}
+
+	.form__label {
+		display: inline-block;
+		margin-bottom: 5px; 
+		font-weight: 300;
+		font-size: 16px; 
+
+		@include breakpoint-down(mobile) {
+			margin-bottom: 3px; 
+		}
+	}
+
+	.form__image {
+		max-width: 50%; 
+		margin-top: 20px; 
+		border-radius: 10px; 
+		overflow: hidden; 
+	}
+
+	.form__actions {
+		flex-shrink: 0;
+		text-align: right; 
+		min-width: 150px;
+	}
+}

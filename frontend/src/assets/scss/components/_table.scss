@@ -1,0 +1,64 @@
+/* ------------------------------------------------------------ *\
+	Table
+\* ------------------------------------------------------------ */
+
+.table {
+	border: 2px solid $c-pink;
+	border-radius: 8px; 
+	overflow: auto;	
+
+	table {
+		border-collapse: collapse;
+		width: 100%;
+		margin: 0;
+	}
+
+	thead {
+		background: $c-pink;
+		color: $c-white;
+	}
+
+	thead th {
+		padding: 10px 5px; 
+	}
+
+	th,
+	td {
+		text-align: center;
+		padding: 5px 10px;
+	}
+
+	tbody tr {
+
+		&:nth-child(even) {
+			background: rgba($c-lightpink, .33);
+
+			&:hover {
+				background: rgba($c-pink, .3);
+			}
+		}
+
+		&:hover {
+			background: rgba($c-pink, .15);
+		}
+	}
+
+	p:not(:last-child) {
+		margin-bottom: 10px; 
+	}
+
+	button {
+		padding: 5px 10px; 
+		line-height: 1; 
+		border-radius: 16px; 
+		border: 1px solid $c-pink; 
+		background: none;
+		transition: all $t-duration;
+
+		&:hover { 
+			background: $c-pink;
+			color: $c-white; 
+		}
+	}
+}
+

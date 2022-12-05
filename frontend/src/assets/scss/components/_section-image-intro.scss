@@ -1,0 +1,61 @@
+/* ------------------------------------------------------------ *\
+	Section Image Intro
+\* ------------------------------------------------------------ */
+
+.section-image-intro {
+	position: relative; 
+	padding: 120px 0; 
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center; 
+
+	@include breakpoint-down(tablet) {
+		padding: 75px 0; 
+	}
+
+	@include breakpoint-down(mobile) {
+		padding: 45px 0; 
+	}
+
+	&:before,
+	&:after {
+		content: '';
+		position: absolute; 
+		width: 100%; 
+		left: 0; 
+	}
+
+	&:before {
+		top: 0; 
+		height: 100%; 
+		background-color: rgba($c-pink, .15);  
+	}
+
+	&:after {
+		height: 75%; 
+		background: linear-gradient(to bottom, transparent, $c-lightpink 85%);   
+		bottom: 0; 
+	}
+
+	h1 {
+		color: $c-white; 
+		font: 700 108px/1 $ff-logo;
+		font-size: 108px; 
+		text-align: center; 
+
+		@include breakpoint-down(tablet) {
+			font-size: 84px; 
+		}
+
+		@include breakpoint-down(mobile) {
+			font-size: 64px; 
+		}
+	}
+
+	.section__head {
+		z-index: 10; 
+		position: relative; 
+		padding: 50px 75px;
+		text-shadow: 0px 3px 15px rgba($c-pink, .33);
+	}
+}

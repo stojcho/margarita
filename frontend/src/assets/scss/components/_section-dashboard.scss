@@ -1,0 +1,28 @@
+/* ------------------------------------------------------------ *\
+	Section Dashboard
+\* ------------------------------------------------------------ */
+
+.section-dashboard {
+	padding: 200px 0; 
+
+    @include breakpoint-down(tablet) {
+        padding: 60px 0 120px;
+    }
+
+    @include breakpoint-down(mobile) {
+        padding: 30px 0 90px;
+    }
+	
+	.section__content {
+		height: 600px; 
+        padding: 0 100px;
+        
+        @include breakpoint-down(tablet) {
+            padding: 0 50px;
+        }
+
+        @include breakpoint-down(mobile) {
+            padding: 0;
+        }
+	}
+}

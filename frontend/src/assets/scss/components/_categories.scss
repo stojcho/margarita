@@ -1,0 +1,53 @@
+/* ------------------------------------------------------------ *\
+	Categories
+\* ------------------------------------------------------------ */
+
+.categories {
+	.categories__items {
+		display: flex;
+		margin: 0 -25px;
+
+		@include breakpoint-down(small-desktop) {
+			margin: -20px -15px; 
+			flex-wrap: wrap; 
+		}
+
+		@include breakpoint-down(mobile) {
+			margin: -15px -10px; 
+		}
+	}
+
+	.categories__item {
+		padding: 0 25px;
+		flex: 0 0 calc(100% / 4);
+		max-width: calc(100% / 4);
+
+		@include breakpoint-down(small-desktop) {
+			padding: 20px 15px;
+			flex: 0 0 calc(100% / 2);
+			max-width: calc(100% / 2);
+		}
+
+		@include breakpoint-down(mobile) {
+			padding: 15px 10px; 
+		}
+
+		@include breakpoint-down(mobile-medium) {
+			flex: 0 0 calc(100% / 1);
+			max-width: calc(100% / 1);
+		}
+	}
+}
+
+.sub-menu {
+	position: absolute; 
+
+	&:before {
+		content: '';
+		position: absolute; 
+		bottom: 100%; 
+		left: 0; 
+		width: 100%; 
+		height: px;
+	}
+}

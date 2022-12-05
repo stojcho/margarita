@@ -1,0 +1,115 @@
+/* ------------------------------------------------------------ *\
+	Account
+\* ------------------------------------------------------------ */
+
+.account {
+	position: relative;
+
+	> a {
+		display: block; 
+		text-decoration: none; 
+		transition: color .3s;
+
+		&:hover {
+			color: $c-pink; 
+		}
+	}
+
+	> a:hover .account__icon {
+		border-color: $c-pink; 
+	}
+
+	.account__icon {
+		transition: border .3s;
+	}
+
+	.account__menu {
+		z-index: 200;
+		position: absolute;
+		top: 100%;
+		left: 50%;
+		transform: translateX(-50%);
+		padding: 10px;
+		margin-top: 10px;
+		visibility: hidden;
+		opacity: 0;
+		transition-property: opacity, visibility;
+		transition-duration: $t-duration;
+		background: $c-white;
+		border-radius: 4px;
+		box-shadow: 0 0 15px rgba($c-black, .25);
+
+		&:before {
+			content: '';
+			position: absolute; 
+			bottom: 100%; 
+			left: 0; 
+			width: 100%; 
+			height: 10px;  
+		}
+	}
+
+	.account__menu ul {
+		column-gap: 4px !important;
+
+		@include breakpoint-down(mobile) {
+			display: block !important; 
+		}
+	}
+
+	.account__menu li + li {
+		@include breakpoint-down(mobile) {
+			margin-top: 5px; 
+			width: 100%; 
+		}
+	}
+
+	.account__entry {
+		@include breakpoint-down(mobile) {
+			display: none; 
+		}
+	}
+
+	.account__btn a {
+		display: block;
+		width: 100px;
+		border-radius: 4px;
+		padding: 5px 10px;
+		font-weight: 400;
+
+		&:hover {
+			color: $c-white !important; 
+		}
+	}
+
+	&:hover .account__menu {
+		visibility: visible;
+		opacity: 1;
+	}
+}
+
+// account logged
+
+.account.is-logged {
+	.account__menu {
+		text-transform: capitalize;
+		width: 200px;
+
+		@include breakpoint-down(mobile) {
+			width: 150px;
+		}
+	}
+
+	.account__menu ul {
+		display: block;
+	}
+
+	.account__menu li + li {
+		margin-top: 8px;
+	}
+
+	.account__btn,
+	.account__btn a {
+		width: 100%;
+	}
+}

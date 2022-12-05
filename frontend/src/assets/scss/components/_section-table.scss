@@ -1,0 +1,33 @@
+/* ------------------------------------------------------------ *\
+	Section Table
+\* ------------------------------------------------------------ */
+
+.section-table {
+	padding: 120px 50px 220px; 
+
+	@include breakpoint-down(tablet) {
+		padding: 75px 25px 175px; 
+	}
+
+	@include breakpoint-down(mobile) {
+		padding: 15px 0 120px; 
+	}
+
+	.section__content {
+		max-width: 1000px; 
+		margin: 0 auto; 
+		border-radius: 20px; 
+		padding: 50px 75px; 
+		border: 2px solid rgba($c-pink, .5);
+		box-shadow: 0 5px 30px rgba($c-pink, .3); 
+		backdrop-filter: blur(2px);
+
+		@include breakpoint-down(tablet) {
+			padding: 30px 45px; 
+		}
+
+		@include breakpoint-down(mobile) {
+			padding: 20px 30px; 
+		}
+	}
+}
